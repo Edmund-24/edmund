@@ -1,0 +1,204 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>HP Laptop</title>
+		<style>
+		   
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f4f4f4;
+			}
+
+			header {
+				color: white;
+				background-color: #808080; 
+				padding: 1rem 0;
+				text-align: center;
+			}
+
+			nav {
+				background-color: #333;
+				overflow: hidden;
+			}
+
+			nav a {
+				float: left;
+				display: block;
+				color: white;
+				text-align: center;
+				padding: 14px 20px;
+				text-decoration: none;
+				transition: background-color 0.3s;
+			}
+
+			nav a:hover {
+				background-color: #33ACFF;
+			}
+
+			main {
+				padding: 20px;
+				text-align: center;
+			}
+
+			footer {
+				color: white;
+				background-color: rgba(0, 0, 0, 0.5);
+				text-align: center;
+				padding: 1rem 0;
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+			}
+
+			
+			h1, h2 {
+				margin-top: 0;
+			}
+
+			h1 {
+				color: white; 
+			}
+
+			h2 {
+				color: #004aad;
+			}
+
+			p {
+				color: #333;
+			}
+
+			img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+				margin: 0 auto;
+				border-radius: 5px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+		   
+			main {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.page {
+				display: none;
+			}
+
+			.page.active {
+				display: block;
+			}
+
+			.product-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 20px;
+				margin-top: 20px;
+			}
+
+			.product {
+				background-color: white;
+				padding: 15px;
+				border-radius: 5px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+
+			.product img {
+				border-radius: 5px;
+				margin-bottom: 10px;
+			}
+			 .product:hover {
+            transform: scale(1.2);
+        }
+		</style>
+		<script>
+			function showPage(pageId) {
+				var pages = document.querySelectorAll('.page');
+				for (var i = 0; i < pages.length; i++) {
+					pages[i].style.display = 'none';
+				}
+				document.getElementById(pageId).style.display = 'block';
+			}
+
+			window.onload = function() {
+				showPage('home');
+			};
+		</script>
+	</head>
+	<body>
+		<header>
+			<h1>HP Laptop</h1>
+		</header>
+		<nav>
+			<a href="#" onclick="showPage('home')">Homepage</a>
+			<a href="#" onclick="showPage('products')">product description</a>
+			<a href="#" onclick="showPage('support')">service and support</a>
+			<a href="#" onclick="showPage('contact')">contact us</a>
+		</nav>
+		<main>
+			<div id="home" class="page">
+				<h2>Welcome to the official website of HP Computer</h2>
+				<p>Take you to explore the latest HP laptops, desktops and peripherals.</p>
+				<div class="product-grid">
+					<div class="product">
+						<img src="https://tse1.mm.bing.net/th?id=OIP.5-dPn22msQqZH5CFxhobCwHaEu&pid=Api&P=0&h=180" alt="HP电脑1">
+						<h3>HP Spectre x360</h3>
+						<p>High-performance, ultra-thin laptop perfect for multitasking</p>
+						<p>Price RM3500</p>
+					</div>
+					<div class="product">
+						<img src="https://jp.ext.hp.com/content/dam/jp-ext-hp-com/jp/ja/ec/notebooks/personal/envy_13_ba0000/images/move_top_full.jpg" alt="HP电脑2">
+						<h3>HP Envy 13</h3>
+						<p>The combination of stylish design and powerful functions is suitable for business people</p>
+						<p>Price RM2900</p>
+					</div>
+					<div class="product">
+						<img src="https://www.notebookcheck.net/uploads/tx_nbc2/HpGamingPavilion15-cxPurpil__4_.JPG" alt="HP电脑3">
+						<h3>HP Pavilion Gaming</h3>
+						<p>High-performance PC designed for gamers</p>
+						<p>Price RM4500</p>
+					</div>
+					<div class="product">
+						<img src="https://news-cdn.softpedia.com/images/news2/hp-omen-15-gaming-laptop-2018-launched-with-major-hardware-upgrades-521341-3.jpg" alt="HP电脑4">
+						<h3>HP Omen</h3>
+						<p>Essential equipment for top gaming experience</p>
+						<p>Price RM7800</p>
+					</div>
+					<div class="product">
+						<img src="https://www.laptoparena.net/images/HP_Elite_Dragonfly_c6dc4d.jpg" alt="HP电脑5">
+						<h3>HP Elite Dragonfly</h3>
+						<p>Lightweight and efficient business laptop</p>
+						<p>Price RM2600</p>
+					</div>
+				</div>
+			</div>
+			<div id="products" class="page" style="display: none; text-align: left;">
+		<h2>HP Computer product introduction</h2>
+		<p>HP offers a wide range of high-performance computers, including the following series：</p>
+		<ul>
+			<li><strong>HP Spectre series</strong> - An ultra-light, high-performance laptop designed for productive work and creative design</li>
+			<li><strong>HP Envy series</strong> - 	A stylish, powerful laptop for a variety of uses                                         </li>
+			<li><strong>HP Pavilion series</strong> - An all-round notebook with high cost performance, suitable for home and student use    </li>
+			<li><strong>HP Omen series</strong> - High-performance gaming laptops and desktops tailor-made for gamers                        </li>
+			<li><strong>HP Elite series</strong> - A high-end notebook for business professionals, offering exceptional portability and security</li>
+		</ul>
+	</div>
+
+			<div id="support" class="page" style="display: none;">
+				<h2>service and support</h2>
+				<p>We provide comprehensive technical support and customer service to ensure your HP equipment always operates at its best.</p>
+				<img src="https://tse1.mm.bing.net/th?id=OIP.roTbP0sF4WINEy9qt6celQHaDT&pid=Api&P=0&h=180 alt="service and support">
+			</div>
+			<div id="contact" class="page" style="display: none;">
+				<h2>contact us</h2>
+				<p>If you have any questions or need help, please contact our customer service team. We are always here to help.</p>
+				<p2>Contact number :011-8521818
+				<img src="https://tse3.mm.bing.net/th?id=OIP.UJi3emKw3XTYmW74ipuLoAHaE8&pid=Api&P=0&h=180" alt="contact us">
+			</div>
+		</main>
+	</body>
+	</html>
